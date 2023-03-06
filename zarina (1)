@@ -1,0 +1,15 @@
+#!/bin/bash
+for run in {1..10}
+do
+date +“%H:%M:%S”
+ps -ef | wc -l
+# sleep 5
+done
+
+cat /etc/os-release | grep -w NAME
+cat /etc/os-release |grep -w NAME | awk '{print $1}' | sed 's/NAME="//'
+
+for create in {50..100}
+do
+touch /opt/$create.txt
+done
